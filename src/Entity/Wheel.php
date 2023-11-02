@@ -28,4 +28,58 @@ class Wheel{
         $this->width = $width;
         $this->pressure = $pressure;
     }
+
+	/**
+	 * Diameter of the wheel in millimeters
+	 * @return int
+	 */
+	public function getDiameter(): int {
+		return $this->diameter;
+	}
+	
+	/**
+	 * Diameter of the wheel in millimeters
+	 * @param int $diameter Diameter of the wheel in millimeters
+	 * @return self
+	 */
+	public function setDiameter(int $diameter): self {
+		$this->diameter = $diameter;
+		return $this;
+	}
+
+	/**
+	 * Diameter of the wheel in millimeters
+	 * @return int
+	 */
+	public function getWidth(): int {
+		return $this->width;
+	}
+	
+	/**
+	 * Diameter of the wheel in millimeters
+	 * @param int $width Diameter of the wheel in millimeters
+	 * @return self
+	 */
+	public function setWidth(int $width): self {
+		$this->width = $width;
+		return $this;
+	}
+
+	/**
+	 * The air pressure of the tire in pound per square inch gauge
+	 * @return int
+	 */
+	public function getPressure(): int {
+		return $this->pressure;
+	}
+	
+	/**
+	 * The air pressure of the tire in pound per square inch gauge
+	 * @param int $pressure The air pressure of the tire in pound per square inch gauge
+	 * @return self
+	 */
+	public function setPressure(int $pressure): self {
+		$this->pressure = $pressure;
+		return $this;
+	}
 }
