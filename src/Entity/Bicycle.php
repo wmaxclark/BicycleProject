@@ -3,14 +3,15 @@
 namespace App\Entity;
 
 use App\Entity\Wheel;
+use App\Interface\Rideable;
 
 /**
  * Defines the properties of a representation of a bicycle.
  * 
  * @author William Clark <w.max.clark@gmail.com>
  */
-class Bicycle{
-
+class Bicycle  implements Rideable
+{
     /**
      * The manufacturer of the bicycle as a company name.
      */
@@ -39,6 +40,14 @@ class Bicycle{
         $this->rearWheel = new Wheel();
     }
 
+	/**
+	 * Ride the bicycle, slightly lowering the tire pressure
+	 */
+	public function ride()
+	{
+		$this->frontWheel->setPressure($this->frontWheel->getPressure() - (rand(0,2) - 1));
+		$this->rearWheel->setPressure($this->rearWheel->getPressure() - (rand(0,2) - 1));
+	}
 	/**
 	 * The year the bicycle was constructed
 	 * @return int
